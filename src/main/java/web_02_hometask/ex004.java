@@ -10,7 +10,12 @@ public class ex004 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         System.out.print("Введите любую строку: ");
-        String str = scan.next();
+        String str = "";
+        try {
+            str = scan.next();
+        } catch (Exception e) {
+            System.out.print("Ошибка! ");
+        }
         scan.close();
 
         System.out.println(isPalindrom(str));

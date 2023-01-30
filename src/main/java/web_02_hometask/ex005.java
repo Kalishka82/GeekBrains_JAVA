@@ -12,11 +12,11 @@ public class ex005 {
 
         String pathProject = System.getProperty("user.dir");
         String pathFile = pathProject.concat("/src/main/resources/lib/file_ex005.txt");
-        WriteToFile(pathFile, StrBuild_1(str));
+        writeToFile(pathFile, strBuild1(str));
 //        System.out.println(StrBuild_2(str));
     }
 
-    private static String StrBuild_1(String string) {
+    private static String strBuild1(String string) {
         StringBuilder newStr = new StringBuilder();
         for (int i = 0; i < 100; i++) {
             newStr.append(string);
@@ -24,13 +24,15 @@ public class ex005 {
         return newStr.toString();
     }
 
-    private static String StrBuild_2(String string) {
+//    следующий метод указан в кач-ве альтернативы предыдущему,
+//    чтобы показать, что и так, и так можно, и оба работают
+    private static String strBuild2(String string) {
         String newStr2;
         newStr2 = String.valueOf(string).repeat(100);
         return newStr2;
     }
 
-    private static void WriteToFile(String path, String string) {
+    private static void writeToFile(String path, String string) {
         try(PrintWriter pw = new PrintWriter(path)) {
             pw.print(string);
         } catch (FileNotFoundException e) {
