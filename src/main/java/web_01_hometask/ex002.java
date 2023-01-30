@@ -9,8 +9,9 @@ import java.util.Scanner;
 public class ex002 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.printf("Введите год для определения високосности: ");
+        System.out.println("Введите год для определения високосности: ");
         int year = scan.nextInt();
+        
         scan.close();
 
         System.out.println(isLeapYear(year));

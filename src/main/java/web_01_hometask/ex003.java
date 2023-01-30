@@ -11,32 +11,30 @@ public class ex003 {
     public static void main(String[] args) {
         int[] nums = new int[10];
         Random random = new Random();
-        FillRandArray(nums, random);
+        fillRandArray(nums, random);
         System.out.println(Arrays.toString(nums));
         int val = 3;
 
-        System.out.println(Arrays.toString(ChangeElems(nums, val)));
+        System.out.println(Arrays.toString(changeElems(nums, val)));
     }
 
-    static int[] FillRandArray(int[] nums, Random random) {
+    static int[] fillRandArray(int[] nums, Random random) {
         for (int i = 0; i < nums.length; i++) {
             nums[i] = random.nextInt(1, 4);
         }
         return nums;
     }
 
-    static int[] ChangeElems(int[] nums, int val) {
-        int l = 0;
+    static int[] changeElems(int[] nums, int val) {
         int r = nums.length - 1;
-        for (l = 0; l <= r; l++) {
+        for (int l = 0; l <= r; l++) {
             if (nums[l] != val) continue;
             else if (nums[l] == val && nums[r] == val) {
                 r--;
                 l--;
             } else if (nums[l] == val && nums[r] != val) {
-                int temp = nums[r];
+                nums[l] = nums[r];
                 nums[r] = val;
-                nums[l] = temp;
                 r--;
             }
         }

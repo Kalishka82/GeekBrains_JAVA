@@ -9,33 +9,31 @@ public class ex001 {
         int[] array = new int[11];
         Random random = new Random();
 
-        FillRandArray(array, random);
+        fillRandArray(array, random);
         System.out.println(Arrays.toString(array));
 
-        int max = FindMax(array);
+        int max = findMax(array);
         System.out.println("max = " + max);
 
-        int min = FindMin(array);
+        int min = findMin(array);
         System.out.println("min = " + min);
         }
 
-    static int[] FillRandArray (int[] array, Random random) {
+    static void fillRandArray(int[] array, Random random) {
         for (int i = 0; i < array.length; i++) {
             array[i] = random.nextInt(-100, 100);
         }
-        return array;
     }
 
-    static int FindMax(int[] array) {
+    static int findMax(int[] array) {
         int max = array[0];
         for (int i = 1; i < array.length; i++) {
             if (array[i] > max) max = array[i];
-//            else max = max;
         }
         return max;
     }
 
-    static int FindMin(int[] array) {
+    static int findMin(int[] array) {
         int min = array[0];
         for (int i = 1; i < array.length; i++) {
             if (array[i] < min) min = array[i];
