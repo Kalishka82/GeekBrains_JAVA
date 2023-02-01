@@ -7,10 +7,9 @@
  */
 package web_03_hometask;
 
-import javax.sound.midi.Soundbank;
 import java.util.*;
 
-public class ex_008 {
+public class ex008 {
     public static void main(String[] args) {
         List<String> solarSystem = new ArrayList<>();
         Random random = new Random();

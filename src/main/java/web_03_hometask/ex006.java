@@ -6,7 +6,7 @@ package web_03_hometask;
 
 import java.util.*;
 
-public class ex_006 {
+public class ex006 {
     public static void main(String[] args) {
         Random random = new Random();
         List<Integer> list = new ArrayList<>();

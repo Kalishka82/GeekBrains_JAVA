@@ -10,7 +10,7 @@ import java.util.Random;
 
 import static java.util.Collections.*;
 
-public class ex_007 {
+public class ex007 {
     public static void main(String[] args) {
         Random random = new Random();
         List<Integer> list = new ArrayList<>();
