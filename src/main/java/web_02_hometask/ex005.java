@@ -9,16 +9,20 @@ import java.io.*;
 public class ex005 {
     public static void main(String[] args) {
         String str = new String("TEST");
+        Integer n = 100;   //кол-во повторений строки str
+
+        System.out.println(str.length());
 
         String pathProject = System.getProperty("user.dir");
-        String pathFile = pathProject.concat("/src/main/resources/lib/file_ex005.txt");
-        writeToFile(pathFile, strBuild1(str));
-//        System.out.println(StrBuild_2(str));
+        String PATHFILE = pathProject.concat("/src/main/resources/lib/file_ex005.txt");
+        writeToFile(PATHFILE, strBuild1(str, n));
+//        System.out.println(strBuild2(str, n));
     }
 
-    private static String strBuild1(String string) {
-        StringBuilder newStr = new StringBuilder();
-        for (int i = 0; i < 100; i++) {
+    private static String strBuild1(String string, Integer n) {
+        StringBuilder newStr = new StringBuilder(n * string.length());
+        System.out.println(newStr.capacity());
+        for (int i = 0; i < n; i++) {
             newStr.append(string);
         }
         return newStr.toString();
@@ -26,9 +30,9 @@ public class ex005 {
 
 //    следующий метод указан в кач-ве альтернативы предыдущему,
 //    чтобы показать, что и так, и так можно, и оба работают
-    private static String strBuild2(String string) {
+    private static String strBuild2(String string, Integer n) {
         String newStr2;
-        newStr2 = String.valueOf(string).repeat(100);
+        newStr2 = string.repeat(n);
         return newStr2;
     }
 
