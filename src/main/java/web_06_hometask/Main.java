@@ -44,7 +44,7 @@ public class Main {
                         , "Apple M2", 4.0, 4, 8
                         , "Apple M2 8-core", 256
                         , "macOS", 101_199));
-//        store.printNotes();
+        store.printNotes();
 
         store.findNoteByDiagonal(15.6);
         System.out.println();
